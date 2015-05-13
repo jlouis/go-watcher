@@ -27,14 +27,14 @@ func Close(done chan struct{}) {
 func main() {
 	done := make(chan struct{})
 	Close(done)
-	path := flag.String("path", "", "location of the  serialized data. This is the directory that will be watched")
+	path := flag.String("path", "your mom", "location of the  serialized data. This is the directory that will be watched")
 	flag.Parse()
 	fmt.Printf("--------> starting watcher \n")
 	// configure action
 	var action watcher.Action
-	action.Do = watcher.S3Example
+	action.Do = watcher.S3Mock
 	// start the watcher
 	watcher := watcher.Watch
-	fmt.Printf("--------> now watching\n")
+	fmt.Printf("--------> now watching: %v\n", *path)
 	watcher(done, *path, action, 100, "msgpack", "xz")
 }
