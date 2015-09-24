@@ -32,9 +32,9 @@ func main() {
 	fmt.Printf("--------> starting watcher \n")
 	// configure action
 	var action watcher.Action
-	action.Do = watcher.S3Mock
+	action.Do = watcher.S3Example
 	// start the watcher
 	watcher := watcher.Watch
 	fmt.Printf("--------> now watching: %v\n", *path)
-	watcher(done, *path, action, 100, "msgpack", "xz")
+	watcher(done, *path, action, 8, "msgpack", "xz")
 }
