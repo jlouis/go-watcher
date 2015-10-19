@@ -1,0 +1,92 @@
+{
+	"version": 0,
+	"dependencies": [
+		{
+			"importpath": "github.com/Sirupsen/logrus",
+			"repository": "https://github.com/Sirupsen/logrus",
+			"revision": "4643a7efec9b8fd7548882e7b30095711343100f",
+			"branch": "master"
+		},
+		{
+			"importpath": "github.com/bugsnag/bugsnag-go",
+			"repository": "https://github.com/bugsnag/bugsnag-go",
+			"revision": "72ff9e15e8c5ae52e8db1dd5dd1f77a9f2f1a895",
+			"branch": "master"
+		},
+		{
+			"importpath": "github.com/bugsnag/osext",
+			"repository": "https://github.com/bugsnag/osext",
+			"revision": "0dd3f918b21bec95ace9dc86c7e70266cfc5c702",
+			"branch": "master"
+		},
+		{
+			"importpath": "github.com/bugsnag/panicwrap",
+			"repository": "https://github.com/bugsnag/panicwrap",
+			"revision": "e5f9854865b9778a45169fc249e99e338d4d6f27",
+			"branch": "master"
+		},
+		{
+			"importpath": "github.com/giulioungaretti/S3",
+			"repository": "https://github.com/giulioungaretti/S3",
+			"revision": "df1c038dec08d14b6f99ce61543c2fb08309ee49",
+			"branch": "master"
+		},
+		{
+			"importpath": "github.com/giulioungaretti/go-xz",
+			"repository": "https://github.com/giulioungaretti/go-xz",
+			"revision": "a63463e87672b8069b1a9889c55beb242bf7648f",
+			"branch": "master"
+		},
+		{
+			"importpath": "github.com/giulioungaretti/structs",
+			"repository": "https://github.com/giulioungaretti/structs",
+			"revision": "2bcd7ffdc07e84d5fffc31cc3ba6b8b764e14536",
+			"branch": "master"
+		},
+		{
+			"importpath": "github.com/goamz/goamz/aws",
+			"repository": "https://github.com/goamz/goamz",
+			"revision": "d769f530bfa9b2a5babddb3fc0f578acc0d456d3",
+			"branch": "master",
+			"path": "/aws"
+		},
+		{
+			"importpath": "github.com/goamz/goamz/s3",
+			"repository": "https://github.com/goamz/goamz",
+			"revision": "d769f530bfa9b2a5babddb3fc0f578acc0d456d3",
+			"branch": "master",
+			"path": "/s3"
+		},
+		{
+			"importpath": "github.com/ugorji/go/codec",
+			"repository": "https://github.com/ugorji/go",
+			"revision": "8a2a3a8c488c3ebd98f422a965260278267a0551",
+			"branch": "master",
+			"path": "/codec"
+		},
+		{
+			"importpath": "github.com/vaughan0/go-ini",
+			"repository": "https://github.com/vaughan0/go-ini",
+			"revision": "a98ad7ee00ec53921f08832bc06ecf7fd600e6a1",
+			"branch": "master"
+		},
+		{
+			"importpath": "gopkg.in/airbrake/gobrake.v2",
+			"repository": "https://gopkg.in/airbrake/gobrake.v2",
+			"revision": "e5efbe565a5a63d8aafee7efa2f4fdd7f42b7bd3",
+			"branch": "master"
+		},
+		{
+			"importpath": "gopkg.in/fsnotify.v1",
+			"repository": "https://gopkg.in/fsnotify.v1",
+			"revision": "7be54206639f256967dd82fa767397ba5f8f48f5",
+			"branch": "master"
+		},
+		{
+			"importpath": "gopkg.in/gemnasium/logrus-airbrake-hook.v2",
+			"repository": "https://gopkg.in/gemnasium/logrus-airbrake-hook.v2",
+			"revision": "31e6fd4bd5a98d8ee7673d24bc54ec73c31810dd",
+			"branch": "master"
+		}
+	]
+}
