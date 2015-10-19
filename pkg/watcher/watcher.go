@@ -1,8 +1,8 @@
 package watcher
 
 import (
+	log "github.com/Sirupsen/logrus"
 	"gopkg.in/fsnotify.v1"
-	"matilde/errors"
 	"strings"
 	"sync"
 )
@@ -25,13 +25,11 @@ func Watch(done chan struct{}, path string, action Action, numWorkers int, exten
 	// init watcher
 	watcher, err := fsnotify.NewWatcher()
 	if err != nil {
-		// NOTE here we keep the panic
-		panic(err)
+		log.Fatal(err)
 	}
 	defer watcher.Close()
 	if err != nil {
-		// NOTE here we keep the panic
-		panic(err)
+		log.Fatal(err)
 	}
 	var wg sync.WaitGroup
 	for i := 0; i < numWorkers; i++ {
@@ -48,7 +46,7 @@ func Watch(done chan struct{}, path string, action Action, numWorkers int, exten
 						}
 					}
 				case err := <-watcher.Errors:
-					errors.Log("error:", "Watching files", err)
+					log.Errorf("error watching files %v ", err)
 				case <-done:
 					return
 				}
