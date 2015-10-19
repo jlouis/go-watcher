@@ -2,14 +2,14 @@ package action
 
 import (
 	"fmt"
+	"github.com/shopgun/"
 	"io/ioutil"
-	"matilde/serialize"
 	"os"
-	"s3"
 	"strings"
 
 	log "github.com/Sirupsen/logrus"
 	"github.com/giulioungaretti/go-xz"
+	s3 "github.com/giulioungaretti/s3Manager"
 )
 
 func makeRelativePath(path string, base string) string {
