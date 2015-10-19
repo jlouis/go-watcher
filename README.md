@@ -2,7 +2,7 @@
 Simple go program that watches a directory (not recursively) and applies an action whenver a change is detected.
 Inside the file action.go, there are a few examples. An action can be anything that implements an interface like :
 
-```golang
+```go
 type Action interface {
 	Do(string) error
 }
