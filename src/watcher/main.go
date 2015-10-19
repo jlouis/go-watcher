@@ -3,6 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
+	"log"
 	"os"
 	"os/signal"
 )
@@ -31,7 +32,10 @@ func main() {
 	fmt.Printf("--------> starting watcher \n")
 	// configure action
 	a := XzToS3{}
-	a.Connect()
+	err := a.Connect()
+	if err != nil {
+		log.Fatal(err)
+	}
 	// start the watcher
 	fmt.Printf("--------> now watching: %v\n", *path)
 	Watch(done, *path, a, 8, "msgpack", "xz")
