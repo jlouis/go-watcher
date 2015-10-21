@@ -1,0 +1,13 @@
+#!/bin/sh
+
+## Wait for the service to start up
+sleep 10
+
+## asssumes bin is in /opt/...
+if [ ! -x /opt/watcher/bin/watcher ]; then
+    exit 1
+fi
+
+## check if the watcher is running
+## exit 0 if one or more EXACT matches are foudn
+pgrep -f watcher
