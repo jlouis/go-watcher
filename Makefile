@@ -1,4 +1,4 @@
-# Makefile
+ea Makefile
 # giulio, 2015-10-21 09:30
 #
 # Simple make file that assumes a gb
