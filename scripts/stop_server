@@ -1,0 +1,8 @@
+#!/bin/sh
+
+if pgrep -f 'watcher@'; then
+    echo "Stopping service"
+    service watcher stop
+fi
+
+echo "Made sure service is stopped."
