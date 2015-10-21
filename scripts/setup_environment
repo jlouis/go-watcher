@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# TODO I DON"T get this
+
+if [ "$DEPLOYMENT_GROUP_NAME" == "CicadaStaging" ]
+then
+    sed -i -e 's/%%%SYSTEM%%%/CicadaStaging/g' /opt/setup_environment.sh
+elif [ "$DEPLOYMENT_GROUP_NAME" == "CicadaProduction" ]
+then
+    sed -i -e 's/%%%SYSTEM%%%/CicadaProduction/g' /opt/setup_environment.sh
+fi
+
+chmod +x /opt/setup_environment.sh

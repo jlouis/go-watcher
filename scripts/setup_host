@@ -1,0 +1,7 @@
+#!/bin/sh
+
+if grep --quiet _laura /etc/passwd; then
+  true
+else
+  useradd --home /opt/laura _laura
+fi
