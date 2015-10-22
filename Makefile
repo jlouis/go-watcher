@@ -20,6 +20,9 @@ test: build
 clean:
 	@go clean $(GOFLAGS) -i ./...
 
+distclean: clean
+	rm -fr release
+
 rel release: build
 	mkdir -p release
 	mkdir -p release/bin
@@ -27,6 +30,6 @@ rel release: build
 	cp -r scripts release
 	cp bin/watcher  release/bin
 
-.PHONY: all test clean build install
+.PHONY: all test clean build install distclean rel release
 
 # vim:ft=make
