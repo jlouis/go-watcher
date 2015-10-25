@@ -1,4 +1,3 @@
-ea Makefile
 # giulio, 2015-10-21 09:30
 #
 # Simple make file that assumes a gb
@@ -21,11 +20,16 @@ test: build
 clean:
 	@go clean $(GOFLAGS) -i ./...
 
-rel release:
-	cp appspec.yml _build/prod/rel
-	cp -r scripts _build/prod/rel
-	cp config/config.sh _build/prod/rel
+distclean: clean
+	rm -fr release
 
-.PHONY: all test clean build install
+rel release: build
+	mkdir -p release
+	mkdir -p release/bin
+	cp appspec.yml release
+	cp -r scripts release
+	cp bin/watcher  release/bin
+
+.PHONY: all test clean build install distclean rel release
 
 # vim:ft=make
