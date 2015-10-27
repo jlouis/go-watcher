@@ -1,6 +1,0 @@
-#!/bin/sh
-
-chown -R _laura /opt/laura/watcher
-chmod +x /opt/laura/watcher/config.sh
-
-service watcher start

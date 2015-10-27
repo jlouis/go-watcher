@@ -6,9 +6,7 @@ files:
   - source: scripts/watcher.conf
     destination: /etc/init/
   - source: scripts/setup_environment.sh
-    destination: /opt/laura/watcher
-  - source: config.sh
-    destination: /opt/laura/watcher
+    destination: /opt/laura/watcher/
 
 hooks:
   BeforeInstall:
