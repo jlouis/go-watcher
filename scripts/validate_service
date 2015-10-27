@@ -4,7 +4,7 @@
 sleep 10
 
 ## asssumes bin is in /opt/...
-if [ ! -x /opt/watcher/bin/watcher ]; then
+if [ ! -x /opt/laura/watcher/watcher ]; then
     exit 1
 fi
 
