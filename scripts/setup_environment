@@ -8,5 +8,5 @@ then
 elif [ "$DEPLOYMENT_GROUP_NAME" == "GoWatcherProduction" ]
 then
     sed -i -e 's/%%%SYSTEM%%%/GoWatcherProduction/g' /opt/laura/watcher/setup_environment.sh
-
+fi
 chmod +x /opt/laura/watcher/setup_environment.sh
