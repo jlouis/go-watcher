@@ -1,8 +1,7 @@
-
 version: 0.0
 os: linux
 files:
-  - source: /bin/watcher
+  - source: bin/watcher
     destination: /opt/laura/watcher/
   - source: scripts/watcher.conf
     destination: /etc/init/
